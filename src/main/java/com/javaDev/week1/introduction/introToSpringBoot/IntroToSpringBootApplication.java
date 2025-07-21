@@ -7,21 +7,23 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
 public class IntroToSpringBootApplication implements CommandLineRunner {
-	@Autowired // used for dependency injection
-	Apple apple1;
+//	@Autowired // used for dependency injection
+//	Apple apple1;
+//
+//	@Autowired
+//	Apple apple2;
 
 	@Autowired
-	Apple apple2;
+	DBService dbService;
 
 	public static void main(String[] args) {
-
 		SpringApplication.run(IntroToSpringBootApplication.class, args);
-
 	}
 
 	@Override
 	public void run(String... args) throws Exception {
-		apple1.eatApple();
-		apple2.eatApple();
+		System.out.println(dbService.getData());
+//		apple1.eatApple();
+//		apple2.eatApple();
 	}
 }
