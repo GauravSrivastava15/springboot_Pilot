@@ -7,6 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
 public class IntroToSpringBootApplication implements CommandLineRunner {
+	// we can also use ApplicationRunner instead of CommandLineRunner
 //	@Autowired // used for dependency injection
 //	Apple apple1;
 //
