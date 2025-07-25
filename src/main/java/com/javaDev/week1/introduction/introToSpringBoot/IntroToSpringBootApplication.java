@@ -17,6 +17,8 @@ public class IntroToSpringBootApplication implements CommandLineRunner {
 	@Autowired
 	DBService dbService;
 
+	@Autowired
+	CakeBaker cakeBaker;
 	public static void main(String[] args) {
 		SpringApplication.run(IntroToSpringBootApplication.class, args);
 	}
@@ -24,6 +26,7 @@ public class IntroToSpringBootApplication implements CommandLineRunner {
 	@Override
 	public void run(String... args) throws Exception {
 		System.out.println(dbService.getData());
+		cakeBaker.bakeCake();
 //		apple1.eatApple();
 //		apple2.eatApple();
 	}
